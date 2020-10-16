@@ -234,7 +234,7 @@ resource "aws_launch_configuration" "as_conf" {
   name ="terraform-launch-config"
   key_name = var.aws_key_name
   security_groups = [aws_security_group.web.id]
-  iam_instance_profile = aws_iam_instance_profile.prometheus-instance-profile.name
+  #iam_instance_profile = aws_iam_instance_profile.prometheus-instance-profile.name
   user_data = data.template_file.myuserdata1.rendered
   #associate_public_ip_address = false
   #depends_on = ["aws_db_instance.default"]
